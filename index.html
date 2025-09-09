@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>youngmike.dev</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/f16f489acd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <img src="./images/logo.png" class="logo" alt="Logo">
+      <h1>Welcome</h1>
+      <ul id="sidemenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+  </div>
+
+  <div class="container2">
+    <div class="header-text">
+      <h1>Hello! I'm <span>Mike Young.</span></h1>
+      <p>
+        Welcome Coders I'm a Front-End-Developer!<br>
+        Transforming complex ideas into responsive,<br> accessible websites.<br>
+        Specializing in React, JavaScript, and modern<br> CSS to create fast, engaging and dynamic user experiences.<br>
+        I craft elegant, user-centric interfaces that tell<br> a story.
+      </p>
+    </div>
+
+    <div id="header"></div>
+    <button class="connect-btn" onclick="window.location='#contact'">Let's Connect</button>
+  </div>
+
+  <!-------------about---------------->
+  <div id="about">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="./images/mike.png" alt="About Me">
+      </div>
+      <div class="about-col-2">
+        <h1>About Me</h1>
+        <p>
+          A dedicated front-end developer specializing in the modern JavaScript ecosystem.
+          I build dynamic, single-page applications using React and Vue,
+          with a strong focus on state management and component-based architecture.
+          I'm passionate about continuous learning and applying new technologies to solve real-world problems.
+          I thrive on the challenge of making websites not only look stunning but also function flawlessly across all devices.
+        </p>
+
+        <div class="tab-title">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br> Designing Web/App Interfaces</li>
+            <li><span>Web Development</span><br> Web App development.</li>
+            <li><span>App Development</span><br> Building Android and iOS Apps.</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2023</span><br>UI/UX Design Training at Kirinyaga University.</li>
+            <li><span>2024</span><br>Web App Development Training at Kirinyaga University.</li>
+            <li><span>2025</span><br>Mobile App Development Training at Kirinyaga University.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-----------service---------->
+  <div id="services" class="services">
+    <div class="container3">
+      <h1 id="sub-title">My Services</h1>
+      <div class="service-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>
+            I design clean, modern interfaces focused on user experience and conversion.
+            My process blends aesthetic appeal with strategic functionality,
+            resulting in designs that are not only beautiful but also intuitive and effective.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-crop"></i>
+          <h2>UI/UX Design</h2>
+          <p>
+            I craft intuitive digital experiences where form meets function.
+            My process involves empathetic user research, iterative prototyping,
+            and meticulous interface design. The goal is always the same:
+            to create products that are not only visually stunning but also incredibly simple and satisfying to use.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div>
+          <i class="fa-brands fa-app-store-ios"></i>
+          <h2>App Design</h2>
+          <p>
+            I design native mobile experiences that feel intuitive and effortless.
+            Specializing in iOS and Android design guidelines, I focus on
+            gesture-driven navigation, seamless animations, and platform-specific patterns
+            to create apps that users instinctively know how to use.
+          </p>
+          <a href="#" class="Learn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---------Portfolio----------->
+  <div id="portfolio">
+    <div class="container4">
+      <h1 id="sub-title">My Work</h1>
+      <div class="work-list">
+
+        <div class="work">
+          <img src="./images/social-app.jpg" class="app" alt="Social App">
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>The app connects you to the talented people in the world. Download it from Playstore.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i> Click</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="./images/music-app.jpg" class="app" alt="Music App">
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>The app connects you to the talented people in the world. Download it from Playstore.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i> Click</a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="./images/shopping-app.jpg" class="app" alt="Shopping App">
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <p>The app connects you to the talented people in the world. Download it from Playstore.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i> Click</a>
+          </div>
+        </div>
+
+      </div>
+      <a href="#" class="btn">See More</a>
+    </div>
+  </div>
+
+  <!---------Contact----------->
+  <div id="contact">
+    <div class="container5">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> youngmike703@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +254 757813837</p>
+          <div class="social-icons">
+            <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="./zipfile/cv.pdf" download="My_CV" class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form action="">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>CopyRight <i class="fa-solid fa-copyright"></i> Mike. Made with
+        <i class="fa-solid fa-heart"></i> by Easy Tutorials
+      </p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
