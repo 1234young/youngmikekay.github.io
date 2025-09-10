@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    color: #333;
+
+    background: 
+        linear-gradient(rgba(224, 234, 252, 0.7), rgba(207, 222, 243, 0.3)), 
+        url('../images/buset.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+ 
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d6cdf;
+    padding: 10px 24px;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.logo img {
+    height: 50px;
+    width: 55px;
+    border-radius: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    color: #2d6cdf;
+}
+.container h1{
+    background: linear-gradient(to right, #f50808, #0414f0);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.stats-section {
+    background: #f6f8fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44,108,223,0.07);
+    padding: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.stats-section p {
+    margin: 8px 0;
+}
+
+.seat-toggle {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#toggleSeatsBtn {
+    padding: 8px 18px;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+}
+
+#toggleSeatsBtn:hover {
+    background: #1b4fa0;
+}
+
+#emptySeatContainer {
+    margin-top: 6px;
+    font-size: 0.98rem;
+    color: #333;
+    background: #f6f8fa;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0 1px 4px rgba(44,108,223,0.07);
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+#seatSelect {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bfcbe3;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bfcbe3;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button[type="submit"], #resetBtn {
+    width: 100%;
+    padding: 12px;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover, #resetBtn:hover {
+    background: #1b4fa0;
+    color: #fff;
+}
+
+#resetBtn {
+    background: #e0eafc;
+    color: #2d6cdf;
+    border: 1px solid #bfcbe3;
+    margin-top: 8px;
+}
+
+#resetBtn:hover {
+    background: #cfdef3;
+    color: #1b4fa0;
+}
+
+#receipt {
+    margin-top: 28px;
+    padding: 18px;
+    background: #f6f8fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44,108,223,0.07);
+    display: none;
+}
+
+.receipt-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+#downloadBtn, #printBtn {
+    flex: 1 1 0;
+    padding: 12px;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: none;
+}
+
+#downloadBtn:hover, #printBtn:hover {
+    background: #1b4fa0;
+}
+
+.info-section {
+    max-width: 400px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(44,108,223,0.07);
+    padding: 18px 16px;
+}
+
+.info-section h2 {
+     background: linear-gradient(to right, #f50808, #0414f0);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+    .container, .info-section {
+        max-width: 98vw;
+        padding: 18px 8px;
+    }
+    h1 {
+        font-size: 1.3rem;
+        background: linear-gradient(to right, #f50808, #0414f0);
+        background-clip: text;
+        color: transparent;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 8px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 8px;
+    }
+    .receipt-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

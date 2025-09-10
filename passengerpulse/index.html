@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><youngmike-passengerpulse.netlify.app"></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../images/bus.jpg" alt="Bus Logo" width="50" />
+            <span>Passenger Count</span>
+        </div>
+        <ul>
+            <li><a href="#pregnant">Pregnant Mothers Seats</a></li>
+            <li><a href="#disabilities">Disabilities Seats</a></li>
+            <li><a href="#utilities">Utilities</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Passenger Count Website</h1>
+        <div id="stats" class="stats-section">
+            <p><strong>Total Passengers Onboard:</strong> <span id="totalCount">0</span></p>
+            <p><strong>Adults:</strong> <span id="adultCount">0</span></p>
+            <p><strong>Children:</strong> <span id="childCount">0</span></p>
+            <p><strong>Empty Seats:</strong> <span id="emptySeats">40</span></p>
+            <!-- Place this inside your #stats section, replacing the old line -->
+            <div class="seat-toggle">
+                <button type="button" id="toggleSeatsBtn">See Seats Available</button>
+                <div id="emptySeatContainer" style="display:none;">
+                <span id="emptySeatList"></span>
+            </div>
+        </div>
+        </div>
+
+        <form id="passengerForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone No:</label>
+                <input type="tel" id="phone" required pattern="[0-9]{10}">
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount Paid:</label>
+                <input type="number" id="amount" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Passenger Type:</label>
+                <select id="type" required>
+                    <option value="">Select</option>
+                    <option value="adult">Adult</option>
+                    <option value="child">Child</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="seatSelect">Select Seat (Excludes Reserved Seats):</label>
+                <select id="seatSelect" required>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="button" id="resetBtn">Reset</button>
+        </form>
+        <div id="receipt" style="display:none;"></div>
+        <div class="receipt-actions" style="display:none;">
+            <button id="downloadBtn">Download Receipt</button>
+            <button id="printBtn">Print Receipt</button>
+        </div>
+    </div>
+        <section id="pregnant" class="info-section">
+           <h2>Seats for Pregnant Mothers</h2>
+           <p>Seats 1-4 are reserved for pregnant mothers for their comfort and safety.</p>
+        </section>
+        <section id="disabilities" class="info-section">
+           <h2>Seats for Persons with Disabilities</h2>
+           <p>Seats 5-8 are reserved for persons with disabilities. Please ask staff for assistance.</p>
+        </section>
+    <section id="utilities" class="info-section">
+        <h2>Important Utilities</h2>
+        <ul>
+            <li>Emergency Contact: <strong>0800-123-456</strong></li>
+            <li>Onboard Wi-Fi</li>
+            <li>Charging Ports</li>
+            <li>Restroom Available</li>
+        </ul>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
